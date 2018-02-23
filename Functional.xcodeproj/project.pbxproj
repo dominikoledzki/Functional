@@ -10,6 +10,7 @@
 		B7FB5A032040A44C006145D5 /* Functional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FB59F92040A44C006145D5 /* Functional.framework */; };
 		B7FB5A082040A44C006145D5 /* FunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB5A072040A44C006145D5 /* FunctionalTests.swift */; };
 		B7FB5A0A2040A44C006145D5 /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FB59FC2040A44C006145D5 /* Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7FB5A142040A469006145D5 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB5A132040A469006145D5 /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B7FB5A022040A44C006145D5 /* FunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FB5A072040A44C006145D5 /* FunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalTests.swift; sourceTree = "<group>"; };
 		B7FB5A092040A44C006145D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7FB5A132040A469006145D5 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				B7FB59FC2040A44C006145D5 /* Functional.h */,
 				B7FB59FD2040A44C006145D5 /* Info.plist */,
+				B7FB5A132040A469006145D5 /* List.swift */,
 			);
 			path = Functional;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					B7FB59F82040A44C006145D5 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					B7FB5A012040A44C006145D5 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FB5A142040A469006145D5 /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +338,7 @@
 		B7FB5A0E2040A44C006145D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -348,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Functional;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -355,6 +362,7 @@
 		B7FB5A0F2040A44C006145D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -377,6 +385,7 @@
 		B7FB5A112040A44C006145D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LBNP92SM5;
@@ -391,6 +400,7 @@
 		B7FB5A122040A44C006145D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LBNP92SM5;

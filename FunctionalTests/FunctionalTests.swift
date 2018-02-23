@@ -7,30 +7,35 @@
 //
 
 import XCTest
-@testable import Functional
+import Functional
 
 class FunctionalTests: XCTestCase {
+    var list: List<Int> = List.end
+    var array = Array<Int>()
+    let elementsCount = 1_000_000
     
     override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        for _ in 0..<elementsCount {
+            array.append(Int(arc4random()))
         }
+        list = List(array)
     }
     
+    func testArrayPerformance() {
+        var sum = 0
+        self.measure {
+            for x in array {
+                sum += x
+            }
+        }
+        print(sum)
+    }
+    
+    func testListPerformance() {
+        var sum = 0;
+        self.measure {
+            sum = list.sum()
+        }
+        print(sum)
+    }
 }
